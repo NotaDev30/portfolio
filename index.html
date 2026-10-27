@@ -1209,6 +1209,44 @@ body.reduce-motion .lightbox img { transform: none; }
   to   { opacity: 1; transform: translateY(0); }
 }
 body.reduce-motion .case-view.is-active .case-wrap { animation: none; }
+
+/* ── Writing section ── */
+.writing-section {
+  padding: 4rem 0;
+  border-top: 1px solid var(--border);
+}
+.writing-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+.writing-item h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.writing-item h3 a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s;
+}
+.writing-item h3 a:hover {
+  text-decoration-color: var(--text);
+}
+.writing-item p {
+  margin-top: 0.25rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+.writing-loading,
+.writing-error {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
 </style>
 </head>
 <body>
@@ -1219,6 +1257,7 @@ body.reduce-motion .case-view.is-active .case-wrap { animation: none; }
 
   <ul class="nav-links">
     <li><a href="#work" class="nav-link">Work</a></li>
+    <li><a href="#writing" class="nav-link">Writing</a></li>
     <li><a href="#about" class="nav-link">About</a></li>
   </ul>
 
@@ -1338,6 +1377,17 @@ body.reduce-motion .case-view.is-active .case-wrap { animation: none; }
 
       </div>
     </div>
+  </section>
+
+  <!-- WRITING -->
+  <section class="writing-section reveal" id="writing" aria-label="Writing">
+    <p class="section-label">Writing</p>
+    <ul class="writing-list">
+      <li class="writing-item">
+        <h3><a href="https://devyanibiriyani.substack.com/p/my-house-ghost-hates-north-indians" target="_blank" rel="noopener noreferrer">My House Ghost Hates North Indians</a></h3>
+        <p>We A/B tested this.</p>
+      </li>
+    </ul>
   </section>
 
   <!-- ABOUT -->
@@ -2292,6 +2342,7 @@ body.reduce-motion .case-view.is-active .case-wrap { animation: none; }
     }, { threshold: 0.15, rootMargin: '0px' });
     revealEls.forEach(el => io.observe(el));
   }
+
 
 })();
 </script>
